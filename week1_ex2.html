@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        // get meal cost and tip from user
+        const meal_cost = parseFloat(prompt("enter meal cost: "));
+        const tip_percentage = parseFloat(prompt("Enter tip amount: "));
+
+        //calc tip amount and total cost
+        const tip_amount = meal_cost * (tip_percentage / 100);
+        const total_cost = meal_cost + tip_amount;
+
+        //display and round dollar amount 2 decimal places, percent to 0 decimal
+        let response = `Meal cost: $${meal_cost.toFixed(2)}\n`;
+        response += `Tip percent: ${(tip_percentage).toFixed(0)}%\n`;
+        response += `Tip amount: $${tip_amount.toFixed(2)}\n`;
+        response += `Total cost: $${total_cost.toFixed(2)}\n`;
+        alert(response);
+    </script>
+</body>
+</html>
